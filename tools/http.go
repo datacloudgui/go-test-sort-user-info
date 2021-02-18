@@ -1,7 +1,9 @@
+// Package tools provide a function to return Json data with error information and status code
 package tools
 
 import (
 	"encoding/json"
+
 	"github.com/valyala/fasthttp"
 )
 
@@ -18,6 +20,7 @@ func ResponseHandlers(ctx *fasthttp.RequestCtx, data interface{}, err interface{
 	ctx.SetContentType("application/json; charset=UTF-8")
 	ctx.SetStatusCode(statusCode)
 
+	// create the json struct
 	str := struct {
 		Response interface{} `json:"response"`
 		Error    interface{} `json:"error"`

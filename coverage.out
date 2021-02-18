@@ -1,0 +1,15 @@
+mode: set
+main/service/sortarr/sortarr.go:25.42,30.16 3 0
+main/service/sortarr/sortarr.go:35.2,35.27 1 0
+main/service/sortarr/sortarr.go:40.2,45.61 4 0
+main/service/sortarr/sortarr.go:30.16,33.3 2 0
+main/service/sortarr/sortarr.go:35.27,38.3 2 0
+main/service/sortarr/sortarr.go:51.48,56.33 3 1
+main/service/sortarr/sortarr.go:66.2,68.38 2 1
+main/service/sortarr/sortarr.go:56.33,58.13 2 1
+main/service/sortarr/sortarr.go:58.13,60.4 1 1
+main/service/sortarr/sortarr.go:60.9,62.4 1 1
+main/service/sortarr/sortarr.go:72.47,73.35 1 1
+main/service/sortarr/sortarr.go:78.2,78.18 1 1
+main/service/sortarr/sortarr.go:73.35,74.18 1 1
+main/service/sortarr/sortarr.go:74.18,76.4 1 1

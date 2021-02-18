@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"main/service/sort"
+	sortarray "main/service/sortarr"
 	"main/service/user"
 	"os"
 	"strings"
@@ -24,7 +24,7 @@ func main() {
 	router := fasthttprouter.New()
 
 	router.Handle("GET", "/api/v1/user/:id", user.GetUser)
-	router.Handle("POST", "/api/v1/sort", sort.SortArray)
+	router.Handle("POST", "/api/v1/sort", sortarray.SortArray)
 
 	server := fasthttp.Server{
 		Name:           "service-controller",

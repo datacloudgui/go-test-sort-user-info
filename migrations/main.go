@@ -14,6 +14,7 @@ import (
 	_ "github.com/lib/pq"
 )
 
+// manage the migration commands for upgrade and downgrade. See readme.md
 func main() {
 
 	var action string

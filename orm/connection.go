@@ -1,3 +1,5 @@
+// Package orm provide DB connection and custom queries
+// this file allow the connection to the DB form environment variables
 package orm
 
 import (
@@ -5,9 +7,9 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
+	_ "github.com/lib/pq"
 	"os"
 	"strconv"
-	_ "github.com/lib/pq"
 )
 
 var instance *sql.DB

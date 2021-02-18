@@ -1,8 +1,10 @@
+// Package orm provide DB connection and custom queries
+// this file is used to define the custom queries requiered
 package orm
 
 var (
 
-	//GetUserQuery
+	//GetUserQuery ...
 	GetUserQuery = `
 	SELECT u.id, co.name, r.name, u.name, u.lastname, u.email, u.is_active
 	FROM users as u

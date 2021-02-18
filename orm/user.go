@@ -1,3 +1,5 @@
+// Package orm provide DB connection and custom queries
+// this file is used to to define user CRUD operations and custom DB manage for users table
 package orm
 
 import (
@@ -6,6 +8,7 @@ import (
 	"fmt"
 )
 
+// A User represent an employee of a software company
 // User ..
 type User struct {
 	ID          string
@@ -28,12 +31,13 @@ func GetUser(userID string) (*User, error) {
 
 	if err != nil {
 
-		fmt.Println("ERR@GetAgency error getting db connection", err)
+		fmt.Println("ERR@GetUser error getting db connection", err)
 		return nil, errors.New("error getting db connection")
 	}
 
 	defer conn.Close()
 
+	// Obtain the DB info
 	err = conn.QueryRowContext(context.Background(), GetUserQuery, userID).Scan(
 		&response.ID,
 		&response.CompanyName,
@@ -45,7 +49,7 @@ func GetUser(userID string) (*User, error) {
 	)
 	if err != nil {
 
-		fmt.Println("ERR@GetAgency error fetching agent record from database", err)
+		fmt.Println("ERR@GetUser error fetching agent record from database", err)
 		return nil, errors.New("error fetching agent record from database")
 	}
 

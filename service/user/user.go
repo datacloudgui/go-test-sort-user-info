@@ -8,16 +8,17 @@ import (
 	"github.com/valyala/fasthttp"
 )
 
-// User ..
-type User struct {
-	ID          string
-	CompanyName string
-	RoleName    string
-	Name        string
-	LastName    string
-	Email       string
-	IsActive    bool
-}
+// // A User represent an employee of a software company
+// // User ..
+// type User struct {
+// 	ID          string
+// 	CompanyName string
+// 	RoleName    string
+// 	Name        string
+// 	LastName    string
+// 	Email       string
+// 	IsActive    bool
+// }
 
 // GetUser ...
 func GetUser(ctx *fasthttp.RequestCtx) {
@@ -35,6 +36,7 @@ func GetUser(ctx *fasthttp.RequestCtx) {
 		return
 	}
 
+	// Call to orm package to consult DB
 	ormResponse, err := orm.GetUser(id)
 	if err != nil {
 		tools.ResponseHandlers(ctx, nil, err, fasthttp.StatusInternalServerError)
